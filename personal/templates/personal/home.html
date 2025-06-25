@@ -49,9 +49,9 @@
 			<div class="d-lg-none mb-3">
 				<div class="card m-auto d-flex flex-column p-3">
 					<img class="img-fluid d-block m-auto pb-2" src="{% static 'codingwithmitch_logo.png' %}" width="72" height="72">
-					<p class="lead">In this course you'll learn how to build a simple blog with user registration and blog CRUD functionality. Django is a powerful
-	  					framework and you'll see why in this course.</p>
-					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
+					<p class="lead">Neste curso, você aprenderá a criar um blog simples com registro de usuários e funcionalidade CRUD. Django é um framework
+poderoso e você verá o porquê neste curso.</p>
+					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Criar post</a></p>
 				</div>
 			</div>
 			<!-- end Top 'create post' bar -->
@@ -69,6 +69,10 @@
 				</div>
 			{% endif %}
 			<!-- End Blog posts-->
+
+		<!-- Pagination -->
+		{% include 'blog/snippets/blog_post_pagination.html' with blog_posts=blog_posts %}
+
 		</div>
 		<!-- end blog feed -->
 
@@ -78,13 +82,15 @@
 
 			<div class="card create-post-bar d-flex flex-column p-3">
 				<img class="img-fluid d-block m-auto pb-2" src="{% static 'codingwithmitch_logo.png' %}" width="72" height="72">
-				<p class="lead">In this course you'll learn how to build a simple blog with user registration and blog CRUD functionality. Django is a powerful
-  					framework and you'll see why in this course.</p>
-				<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
+				<p class="lead">Neste curso, você aprenderá a criar um blog simples com registro de usuários e funcionalidade CRUD. Django é um framework
+poderoso e você verá o porquê neste curso.</p>
+				<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Criar post</a></p>
 			</div>
 
 		</div>
 		<!-- end Right 'create post' column  -->
+
+
 
 	</div>
 </div>

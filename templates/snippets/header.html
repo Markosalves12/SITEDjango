@@ -18,7 +18,7 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">
   	{% if request.user.is_authenticated %}
-  		<p class="m-auto">Hello, {{request.user.username}}</p>
+  		<p class="m-auto">Olá, {{request.user.username}}</p>
   	{% endif %}
   </h5>
   <div class="search-bar mt-sm-2 mr-2">
@@ -34,7 +34,7 @@
 	{% else %}
 		<a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
 	    <a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
-	    <a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a>
+	    <a class="btn btn-outline-primary" href="{% url 'register' %}">Cadastro</a>
 	{% endif %}
 
   </nav>
