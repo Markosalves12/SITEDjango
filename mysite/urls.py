@@ -28,8 +28,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls', 'blog')),
+    path('api/blog/', include('blog.api.urls')),
+
     path('', home_screen_view, name="home"),
+
     path('register/', registration_view, name="register"),
+    path('api/account/', include('account.api.urls', 'account_api')),
+
     path('logout/', logout_view, name="logout"),
     path('login/', login_view, name="login"),
     path('account/', account_view, name="account"),
